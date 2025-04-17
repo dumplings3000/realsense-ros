@@ -43,14 +43,14 @@
 * ### Method 2: The RealSense&trade; distribution:(Recommended)
      > This option is demonstrated in the [.travis.yml](https://github.com/intel-ros/realsense/blob/ros1-legacy/.travis.yml) file. It basically summerize the elaborate instructions in the following 2 steps:
    ### Step 1: Install the latest Intel&reg; RealSense&trade; SDK 2.0
-   - Create a [catkin](http://wiki.ros.org/catkin#Installing_catkin) workspace
+   - Create a catkin workspace
       ```bash
       mkdir -p ~/catkin_ws/src
       cd ~/catkin_ws/src/
       ```
    
 
-   - Clone the latest Intel&reg; RealSense&trade; ROS from [here](https://github.com/intel-ros/realsense/releases) into 'catkin_ws/src/'
+   - Clone the Intel&reg; RealSense&trade; ROS into 'catkin_ws/src/'
       ```bashrc
       git clone https://github.com/dumplings3000/realsense-ros.git
       ```

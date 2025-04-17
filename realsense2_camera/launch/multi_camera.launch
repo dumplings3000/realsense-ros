@@ -1,0 +1,50 @@
+<!-- 
+use  rs-enumerate-devices to check the serial number of the cameras
+and modify the serial_no argument in the launch file accordingly
+-->
+<launch>
+  <!-- hand Camera -->
+  <group ns="hand_camera">
+    <arg name="camera" default="hand_camera"/>
+    <arg name="serial_no" default="944122071422"/>
+    <arg name="depth_width" default="848"/>
+    <arg name="depth_height" default="480"/>
+    <arg name="depth_fps" default="30"/>
+    <arg name="color_width" default="640"/>
+    <arg name="color_height" default="480"/>
+    <arg name="color_fps" default="30"/>
+
+    <include file="$(find realsense2_camera)/launch/rs_rgbd.launch">
+      <arg name="serial_no" value="$(arg serial_no)"/>
+      <arg name="depth_width" value="$(arg depth_width)"/>
+      <arg name="depth_height" value="$(arg depth_height)"/>
+      <arg name="depth_fps" value="$(arg depth_fps)"/>
+      <arg name="color_width" value="$(arg color_width)"/>
+      <arg name="color_height" value="$(arg color_height)"/>
+      <arg name="color_fps" value="$(arg color_fps)"/>
+    </include>
+  </group>
+
+  <!-- Side Camera -->
+  <group ns="side_camera">
+    <arg name="camera" default="side_camera"/>
+    <arg name="serial_no" default="935322071393"/>
+    <arg name="depth_width" default="848"/>
+    <arg name="depth_height" default="480"/>
+    <arg name="depth_fps" default="30"/>
+    <arg name="color_width" default="640"/>
+    <arg name="color_height" default="480"/>
+    <arg name="color_fps" default="30"/>
+
+    <include file="$(find realsense2_camera)/launch/rs_rgbd.launch">
+      <arg name="serial_no" value="$(arg serial_no)"/>
+      <arg name="depth_width" value="$(arg depth_width)"/>
+      <arg name="depth_height" value="$(arg depth_height)"/>
+      <arg name="depth_fps" value="$(arg depth_fps)"/>
+      <arg name="color_width" value="$(arg color_width)"/>
+      <arg name="color_height" value="$(arg color_height)"/>
+      <arg name="color_fps" value="$(arg color_fps)"/>
+    </include>
+  </group>
+
+</launch>
